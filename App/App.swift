@@ -36,7 +36,7 @@ final class GlucoseDirectApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(store)
+                .environmentObject(self.store)
         }
     }
 

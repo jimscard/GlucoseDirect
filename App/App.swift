@@ -13,7 +13,7 @@ import SwiftUI
 // MARK: - GlucoseDirectApp
 
 @main
-final class GlucoseDirectApp: App {
+struct GlucoseDirectApp: App {
     // MARK: Lifecycle
 
     init() {

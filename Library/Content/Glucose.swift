@@ -1,3 +1,4 @@
+
 //
 //  Glucose.swift
 //  GlucoseDirect
@@ -12,7 +13,7 @@ protocol Glucose: Equatable {
     var timestamp: Date { get }
     var glucoseValue: Int { get }
 
-    static func == (lhs: any Glucose, rhs: any Glucose) -> Bool
+    static func == (lhs: Self, rhs: Self) -> Bool
 }
 
 extension Glucose {
@@ -22,7 +23,8 @@ extension Glucose {
         return minutes % ofMinutes == 0
     }
 
-    static func == (lhs: any Glucose, rhs: any Glucose) -> Bool {
+    static func == (lhs: Self, rhs: Self) -> Bool {
         lhs.id == rhs.id
     }
 }
+

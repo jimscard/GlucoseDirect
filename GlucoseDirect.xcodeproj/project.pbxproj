@@ -15,6 +15,8 @@
 		10DD12FE296A146800C900EA /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD12FD296A146800C900EA /* StatisticsView.swift */; };
 		10DD1301296A15B900C900EA /* AddCalibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1300296A15B900C900EA /* AddCalibrationView.swift */; };
 		10DD1303296A15CA00C900EA /* AddBloodGlucoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1302296A15CA00C900EA /* AddBloodGlucoseView.swift */; };
+		4D2A997F2E20D53900BF67A1 /* GlucoAppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A997E2E20D53900BF67A1 /* GlucoAppIcon.icon */; };
+		4D2A99802E20D53900BF67A1 /* GlucoAppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A997E2E20D53900BF67A1 /* GlucoAppIcon.icon */; };
 		6587CE4629621507008518F4 /* AddInsulinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6587CE4529621507008518F4 /* AddInsulinView.swift */; };
 		6587CE4829625E94008518F4 /* InsulinDeliveryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6587CE4729625E94008518F4 /* InsulinDeliveryListView.swift */; };
 		6587CE4A29626070008518F4 /* InsulinDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6587CE4929626070008518F4 /* InsulinDelivery.swift */; };
@@ -252,6 +254,7 @@
 		10DD1302296A15CA00C900EA /* AddBloodGlucoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBloodGlucoseView.swift; sourceTree = "<group>"; };
 		1938BB6F2752F8D10047059C /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1938BB702752F8D20047059C /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4D2A997E2E20D53900BF67A1 /* GlucoAppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = GlucoAppIcon.icon; sourceTree = "<group>"; };
 		6587CE4429620FB0008518F4 /* GlucoseDirectOverride.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = GlucoseDirectOverride.xcconfig; sourceTree = "<group>"; };
 		6587CE4529621507008518F4 /* AddInsulinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInsulinView.swift; sourceTree = "<group>"; };
 		6587CE4729625E94008518F4 /* InsulinDeliveryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsulinDeliveryListView.swift; sourceTree = "<group>"; };
@@ -544,6 +547,7 @@
 				E2FCAC26270741C700FE1CBF /* Extensions */,
 				E2FCAC742707439300FE1CBF /* Resources */,
 				E20B8541266F4A9900AA4224 /* Assets.xcassets */,
+				4D2A997E2E20D53900BF67A1 /* GlucoAppIcon.icon */,
 				E2FCAC89270743E200FE1CBF /* Localizable.strings */,
 			);
 			path = Library;
@@ -1028,6 +1032,7 @@
 				E2A69932278760A300409F33 /* failure.aiff in Resources */,
 				E2A69935278760A300409F33 /* future.aiff in Resources */,
 				E2A69938278760A300409F33 /* collect-point.aiff in Resources */,
+				4D2A997F2E20D53900BF67A1 /* GlucoAppIcon.icon in Resources */,
 				E2A699492787720700409F33 /* alarm.aiff in Resources */,
 				E2A699462787720700409F33 /* expiring.aiff in Resources */,
 				E2A6993F278760A300409F33 /* highlight.aiff in Resources */,
@@ -1046,6 +1051,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2A99802E20D53900BF67A1 /* GlucoAppIcon.icon in Resources */,
 				E2B5BF5E28639C2A006C9C7F /* InfoPlist.strings in Resources */,
 				E2641A5328646E73003C86E3 /* Assets.xcassets in Resources */,
 				E214BB68285A15800004F7AB /* Localizable.strings in Resources */,
@@ -1446,17 +1452,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APP_GROUP_ID = "$(APP_GROUP_ID)";
 				APP_VERSION = 2.1.0;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = GlucoAppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = 555ZRFTBY3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1480,17 +1486,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APP_GROUP_ID = "$(APP_GROUP_ID)";
 				APP_VERSION = 2.1.0;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = GlucoAppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = 555ZRFTBY3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1512,7 +1518,7 @@
 			baseConfigurationReference = E247D8E426B7D70A00BDAF89 /* GlucoseDirect.xcconfig */;
 			buildSettings = {
 				APP_GROUP_ID = "$(APP_GROUP_ID)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = GlucoAppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1547,7 +1553,7 @@
 			baseConfigurationReference = E247D8E426B7D70A00BDAF89 /* GlucoseDirect.xcconfig */;
 			buildSettings = {
 				APP_GROUP_ID = "$(APP_GROUP_ID)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = GlucoAppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

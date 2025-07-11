@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,8 +15,8 @@
 		10DD12FE296A146800C900EA /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD12FD296A146800C900EA /* StatisticsView.swift */; };
 		10DD1301296A15B900C900EA /* AddCalibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1300296A15B900C900EA /* AddCalibrationView.swift */; };
 		10DD1303296A15CA00C900EA /* AddBloodGlucoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1302296A15CA00C900EA /* AddBloodGlucoseView.swift */; };
-		4D2A997F2E20D53900BF67A1 /* GlucoAppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A997E2E20D53900BF67A1 /* GlucoAppIcon.icon */; };
-		4D2A99802E20D53900BF67A1 /* GlucoAppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A997E2E20D53900BF67A1 /* GlucoAppIcon.icon */; };
+		4D2A997F2E20D53900BF67A1 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A997E2E20D53900BF67A1 /* AppIcon.icon */; };
+		4D2A99802E20D53900BF67A1 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A997E2E20D53900BF67A1 /* AppIcon.icon */; };
 		6587CE4629621507008518F4 /* AddInsulinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6587CE4529621507008518F4 /* AddInsulinView.swift */; };
 		6587CE4829625E94008518F4 /* InsulinDeliveryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6587CE4729625E94008518F4 /* InsulinDeliveryListView.swift */; };
 		6587CE4A29626070008518F4 /* InsulinDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6587CE4929626070008518F4 /* InsulinDelivery.swift */; };
@@ -222,14 +222,12 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		E27BFC1526B1407F00F8FBEF /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 13;
+			dstSubfolder = PlugIns;
 			files = (
 				E244744B2859CA9700F8891C /* GlucoseDirectWidget.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -254,7 +252,7 @@
 		10DD1302296A15CA00C900EA /* AddBloodGlucoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBloodGlucoseView.swift; sourceTree = "<group>"; };
 		1938BB6F2752F8D10047059C /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1938BB702752F8D20047059C /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4D2A997E2E20D53900BF67A1 /* GlucoAppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = GlucoAppIcon.icon; sourceTree = "<group>"; };
+		4D2A997E2E20D53900BF67A1 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		6587CE4429620FB0008518F4 /* GlucoseDirectOverride.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = GlucoseDirectOverride.xcconfig; sourceTree = "<group>"; };
 		6587CE4529621507008518F4 /* AddInsulinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInsulinView.swift; sourceTree = "<group>"; };
 		6587CE4729625E94008518F4 /* InsulinDeliveryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsulinDeliveryListView.swift; sourceTree = "<group>"; };
@@ -448,23 +446,19 @@
 /* Begin PBXFrameworksBuildPhase section */
 		E20B8537266F4A9800AA4224 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				101B53852A3BC0210088B4BD /* GRDB in Frameworks */,
 				E251653E28D7BFE900922898 /* ActivityKit.framework in Frameworks */,
 				E27BBA8027AD7DDA00A6B8EE /* HealthKit.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E244743D2859CA9600F8891C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				E251653F28D7BFF100922898 /* ActivityKit.framework in Frameworks */,
 				E24474422859CA9600F8891C /* SwiftUI.framework in Frameworks */,
 				E24474412859CA9600F8891C /* WidgetKit.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -547,7 +541,7 @@
 				E2FCAC26270741C700FE1CBF /* Extensions */,
 				E2FCAC742707439300FE1CBF /* Resources */,
 				E20B8541266F4A9900AA4224 /* Assets.xcassets */,
-				4D2A997E2E20D53900BF67A1 /* GlucoAppIcon.icon */,
+				4D2A997E2E20D53900BF67A1 /* AppIcon.icon */,
 				E2FCAC89270743E200FE1CBF /* Localizable.strings */,
 			);
 			path = Library;
@@ -948,8 +942,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = GlucoseDirectWidget;
 			productName = WidgetsExtension;
 			productReference = E24474402859CA9600F8891C /* GlucoseDirectWidget.appex */;
@@ -973,7 +965,6 @@
 				};
 			};
 			buildConfigurationList = E20B8535266F4A9800AA4224 /* Build configuration list for PBXProject "GlucoseDirect" */;
-			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1001,6 +992,7 @@
 			packageReferences = (
 				101B53832A3BC0210088B4BD /* XCRemoteSwiftPackageReference "GRDB" */,
 			);
+			preferredProjectObjectVersion = 90;
 			productRefGroup = E20B853B266F4A9800AA4224 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1014,7 +1006,6 @@
 /* Begin PBXResourcesBuildPhase section */
 		E20B8538266F4A9800AA4224 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				E20B8545266F4A9900AA4224 /* Preview Assets.xcassets in Resources */,
 				E257088E278354B600896696 /* mute.aiff in Resources */,
@@ -1032,7 +1023,7 @@
 				E2A69932278760A300409F33 /* failure.aiff in Resources */,
 				E2A69935278760A300409F33 /* future.aiff in Resources */,
 				E2A69938278760A300409F33 /* collect-point.aiff in Resources */,
-				4D2A997F2E20D53900BF67A1 /* GlucoAppIcon.icon in Resources */,
+				4D2A997F2E20D53900BF67A1 /* AppIcon.icon in Resources */,
 				E2A699492787720700409F33 /* alarm.aiff in Resources */,
 				E2A699462787720700409F33 /* expiring.aiff in Resources */,
 				E2A6993F278760A300409F33 /* highlight.aiff in Resources */,
@@ -1045,25 +1036,21 @@
 				E2FCAC7D270743B100FE1CBF /* sensor.png in Resources */,
 				E2A69939278760A300409F33 /* achievement.aiff in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E244743E2859CA9600F8891C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
-				4D2A99802E20D53900BF67A1 /* GlucoAppIcon.icon in Resources */,
+				4D2A99802E20D53900BF67A1 /* AppIcon.icon in Resources */,
 				E2B5BF5E28639C2A006C9C7F /* InfoPlist.strings in Resources */,
 				E2641A5328646E73003C86E3 /* Assets.xcassets in Resources */,
 				E214BB68285A15800004F7AB /* Localizable.strings in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E20B8536266F4A9800AA4224 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				E2330A33275E88CF0050A391 /* SensorBluetoothConnection.swift in Sources */,
 				E21656C5275377A90007AF43 /* Transmitter.swift in Sources */,
@@ -1178,11 +1165,9 @@
 				E2FCAC712707438A00FE1CBF /* DirectAction.swift in Sources */,
 				E2FCAC512707424800FE1CBF /* Nightscout.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E244743C2859CA9600F8891C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				6587CE4D29626AD5008518F4 /* InsulinDelivery.swift in Sources */,
 				E2591C5B28740E7A0009F27C /* SensorConnectionInfo.swift in Sources */,
@@ -1234,7 +1219,6 @@
 				E2016FD9285BA80300079195 /* SensorWidget.swift in Sources */,
 				E262DCBE287A3E8900ECAB76 /* SensorError.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -1325,7 +1309,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E20B8547266F4A9900AA4224 /* Debug */ = {
+		E20B8547266F4A9900AA4224 /* Debug configuration for PBXProject "GlucoseDirect" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1388,7 +1372,7 @@
 			};
 			name = Debug;
 		};
-		E20B8548266F4A9900AA4224 /* Release */ = {
+		E20B8548266F4A9900AA4224 /* Release configuration for PBXProject "GlucoseDirect" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1445,18 +1429,19 @@
 			};
 			name = Release;
 		};
-		E20B854A266F4A9900AA4224 /* Debug */ = {
+		E20B854A266F4A9900AA4224 /* Debug configuration for PBXNativeTarget "GlucoseDirectApp" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E247D8E426B7D70A00BDAF89 /* GlucoseDirect.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APP_GROUP_ID = "$(APP_GROUP_ID)";
 				APP_VERSION = 2.1.0;
-				ASSETCATALOG_COMPILER_APPICON_NAME = GlucoAppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = 555ZRFTBY3;
 				ENABLE_PREVIEWS = YES;
@@ -1474,23 +1459,25 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		E20B854B266F4A9900AA4224 /* Release */ = {
+		E20B854B266F4A9900AA4224 /* Release configuration for PBXNativeTarget "GlucoseDirectApp" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E247D8E426B7D70A00BDAF89 /* GlucoseDirect.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APP_GROUP_ID = "$(APP_GROUP_ID)";
 				APP_VERSION = 2.1.0;
-				ASSETCATALOG_COMPILER_APPICON_NAME = GlucoAppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = 555ZRFTBY3;
 				ENABLE_PREVIEWS = YES;
@@ -1508,23 +1495,24 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		E244744C2859CA9700F8891C /* Debug */ = {
+		E244744C2859CA9700F8891C /* Debug configuration for PBXNativeTarget "GlucoseDirectWidget" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E247D8E426B7D70A00BDAF89 /* GlucoseDirect.xcconfig */;
 			buildSettings = {
 				APP_GROUP_ID = "$(APP_GROUP_ID)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = GlucoAppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = Widgets/Widgets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 555ZRFTBY3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widgets/Info.plist;
@@ -1542,24 +1530,28 @@
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.scardelis.libre.Widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		E244744D2859CA9700F8891C /* Release */ = {
+		E244744D2859CA9700F8891C /* Release configuration for PBXNativeTarget "GlucoseDirectWidget" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E247D8E426B7D70A00BDAF89 /* GlucoseDirect.xcconfig */;
 			buildSettings = {
 				APP_GROUP_ID = "$(APP_GROUP_ID)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = GlucoAppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = Widgets/Widgets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 555ZRFTBY3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widgets/Info.plist;
@@ -1577,9 +1569,13 @@
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.scardelis.libre.Widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1589,28 +1585,25 @@
 		E20B8535266F4A9800AA4224 /* Build configuration list for PBXProject "GlucoseDirect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E20B8547266F4A9900AA4224 /* Debug */,
-				E20B8548266F4A9900AA4224 /* Release */,
+				E20B8547266F4A9900AA4224 /* Debug configuration for PBXProject "GlucoseDirect" */,
+				E20B8548266F4A9900AA4224 /* Release configuration for PBXProject "GlucoseDirect" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		E20B8549266F4A9900AA4224 /* Build configuration list for PBXNativeTarget "GlucoseDirectApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E20B854A266F4A9900AA4224 /* Debug */,
-				E20B854B266F4A9900AA4224 /* Release */,
+				E20B854A266F4A9900AA4224 /* Debug configuration for PBXNativeTarget "GlucoseDirectApp" */,
+				E20B854B266F4A9900AA4224 /* Release configuration for PBXNativeTarget "GlucoseDirectApp" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		E244744E2859CA9700F8891C /* Build configuration list for PBXNativeTarget "GlucoseDirectWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E244744C2859CA9700F8891C /* Debug */,
-				E244744D2859CA9700F8891C /* Release */,
+				E244744C2859CA9700F8891C /* Debug configuration for PBXNativeTarget "GlucoseDirectWidget" */,
+				E244744D2859CA9700F8891C /* Release configuration for PBXNativeTarget "GlucoseDirectWidget" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */

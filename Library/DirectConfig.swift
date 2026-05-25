@@ -31,12 +31,12 @@ enum DirectConfig {
     static let timegroupRounding = 15
     static let virtualID = "virtual"
     static let widgetName = "\(appName) Widget"
-    static var bloodGlucoseInput = true
-    static var customCalibration = true
+    static var bloodGlucoseInput = false
+    static var customCalibration = false
     static var glucoseErrors = false
-    static var glucoseStatistics = true
+    static var glucoseStatistics = false
     static let showSmoothedGlucose = true
-    static var showInsulinInput = true
+    static var showInsulinInput = false
 
     static var appName: String = {
         Bundle.main.localizedInfoDictionary?["CFBundleDisplayName"] as! String

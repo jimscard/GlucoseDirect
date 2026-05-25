@@ -13,11 +13,7 @@ struct SettingsView: View {
             SensorConnectorSettingsView()
             SensorConnectionConfigurationView()
             GlucoseSettingsView()
-            AlarmSettingsView()
-            NightscoutSettingsView()
             AppleExportSettingsView()
-            BellmanSettingsView()
-            AdditionalSettingsView()
             AboutView()
         }.listStyle(.grouped)
     }

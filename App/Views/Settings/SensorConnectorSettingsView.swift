@@ -13,33 +13,40 @@ struct SensorConnectorSettingsView: View {
     @EnvironmentObject var store: DirectStore
 
     var body: some View {
-        if store.state.connectionInfos.count > 1 {
-            Section(
-                content: {
-                    Picker("Transmitter", selection: selectedConnectionID) {
+        Section(
+            content: {
+                if store.state.connectionInfos.count > 1 {
+                    Picker("Connection", selection: selectedConnectionID) {
                         ForEach(store.state.connectionInfos, id: \.id) { info in
                             Text(info.name)
                                 .lineLimit(1)
                         }
                     }.pickerStyle(.menu)
-
-                    Picker("Retrieval interval", selection: selectedSensorInterval) {
-                        ForEach(intervals, id: \.self) { interval in
-                            if interval == 1 {
-                                Text("Retrieval interval, every minute")
-                                    .lineLimit(1)
-                            } else {
-                                Text("Retrieval interval, every \(interval.description) minutes")
-                                    .lineLimit(1)
-                            }
-                        }
-                    }.pickerStyle(.menu)
-                },
-                header: {
-                    Label("Sensor connection", systemImage: "rectangle.connected.to.line.below")
+                } else if let connectionInfo = store.state.connectionInfos.first {
+                    HStack {
+                        Text("Connection")
+                        Spacer()
+                        Text(connectionInfo.name)
+                            .foregroundColor(.secondary)
+                    }
                 }
-            )
-        }
+
+                Picker("Retrieval interval", selection: selectedSensorInterval) {
+                    ForEach(intervals, id: \.self) { interval in
+                        if interval == 1 {
+                            Text("Retrieval interval, every minute")
+                                .lineLimit(1)
+                        } else {
+                            Text("Retrieval interval, every \(interval.description) minutes")
+                                .lineLimit(1)
+                        }
+                    }
+                }.pickerStyle(.menu)
+            },
+            header: {
+                Label("Sensor connection", systemImage: "rectangle.connected.to.line.below")
+            }
+        )
     }
 
     // MARK: Private

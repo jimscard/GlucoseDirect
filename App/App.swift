@@ -118,23 +118,8 @@ private func createSimulatorAppStore() -> DirectStore {
     var middlewares = [
         logMiddleware(),
         dataStoreMigrationMiddleware(),
-        bloodGlucoseStoreMiddleware(),
         sensorGlucoseStoreMiddleware(),
-        sensorErrorStoreMiddleware(),
-        insulinDeliveryStoreMiddleware(),
-        glucoseStatisticsMiddleware(),
-        expiringNotificationMiddelware(),
-        glucoseNotificationMiddelware(),
-        connectionNotificationMiddelware(),
-        appleCalendarExportMiddleware(),
-        appleHealthExportMiddleware(),
-        readAloudMiddelware(),
-        bellmanAlarmMiddelware(),
-        nightscoutMiddleware(),
-        appGroupSharingMiddleware(),
-        screenLockMiddleware(),
-        sensorErrorMiddleware(),
-        storeExportMiddleware()
+        appleHealthExportMiddleware()
     ]
 
     if #available(iOS 16.1, *) {
@@ -158,45 +143,17 @@ private func createAppStore() -> DirectStore {
     var middlewares = [
         logMiddleware(),
         dataStoreMigrationMiddleware(),
-        bloodGlucoseStoreMiddleware(),
         sensorGlucoseStoreMiddleware(),
-        sensorErrorStoreMiddleware(),
-        insulinDeliveryStoreMiddleware(),
-        glucoseStatisticsMiddleware(),
-        expiringNotificationMiddelware(),
-        glucoseNotificationMiddelware(),
-        connectionNotificationMiddelware(),
-        appleCalendarExportMiddleware(),
-        appleHealthExportMiddleware(),
-        readAloudMiddelware(),
-        bellmanAlarmMiddelware(),
-        nightscoutMiddleware(),
-        appGroupSharingMiddleware(),
-        screenLockMiddleware(),
-        sensorErrorMiddleware(),
-        storeExportMiddleware()
+        appleHealthExportMiddleware()
     ]
 
     if #available(iOS 16.1, *) {
         middlewares.append(widgetCenterMiddleware())
     }
 
-    var connectionInfos: [SensorConnectionInfo] = []
-
-    #if canImport(CoreNFC)
-        if NFCTagReaderSession.readingAvailable {
-            connectionInfos.append(SensorConnectionInfo(id: DirectConfig.libre2ID, name: LocalizedString("Without transmitter"), connectionCreator: { LibreConnection(subject: $0) }))
-            connectionInfos.append(SensorConnectionInfo(id: DirectConfig.bubbleID, name: LocalizedString("Bubble transmitter"), connectionCreator: { BubbleConnection(subject: $0) }))
-        } else {
-            connectionInfos.append(SensorConnectionInfo(id: DirectConfig.bubbleID, name: LocalizedString("Bubble transmitter"), connectionCreator: { BubbleConnection(subject: $0) }))
-        }
-    #else
-        connectionInfos.append(SensorConnectionInfo(id: DirectConfig.bubbleID, name: LocalizedString("Bubble transmitter"), connectionCreator: { BubbleConnection(subject: $0) }))
-    #endif
-
-    if DirectConfig.isDebug {
-        connectionInfos.append(SensorConnectionInfo(id: DirectConfig.libreLinkID, name: LocalizedString("LibreLink transmitter"), connectionCreator: { LibreLinkConnection(subject: $0) }))
-    }
+    let connectionInfos = [
+        SensorConnectionInfo(id: DirectConfig.libre2ID, name: LocalizedString("Libre sensor"), connectionCreator: { LibreConnection(subject: $0) })
+    ]
 
     middlewares.append(sensorConnectorMiddelware(connectionInfos))
 

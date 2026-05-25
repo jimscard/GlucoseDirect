@@ -21,13 +21,7 @@ struct AppState: DirectState {
         #if targetEnvironment(simulator)
             let defaultConnectionID = DirectConfig.virtualID
         #else
-            #if canImport(CoreNFC)
-                let defaultConnectionID = NFCTagReaderSession.readingAvailable
-                    ? DirectConfig.libre2ID
-                    : DirectConfig.bubbleID
-            #else
-                let defaultConnectionID = DirectConfig.bubbleID
-            #endif
+            let defaultConnectionID = DirectConfig.libre2ID
         #endif
 
         if UserDefaults.shared.glucoseUnit == nil {
